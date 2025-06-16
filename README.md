@@ -76,8 +76,25 @@ cd !$
 
 ### Commands
 
+To push your changes without having to thinks about branch configuration. It will directly push current branch to origin.
+
+```sh
 git push origin HEAD
+```
+
+Reset last commit
+
+```sh
 git reset --soft HEAD~    
+```
+
+Amend last commit without editing your commit message
+```sh
 git commit --amend --no-edit
+```
+
+Rebase according to develop, usefull if you are working with atomic commit and want to have a clean commit tree that respect some sort of temporality
+```sh
 git rebase -i HEAD~$(git rev-list develop..HEAD --count)
+```
 
