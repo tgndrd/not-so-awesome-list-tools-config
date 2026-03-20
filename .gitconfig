@@ -1,0 +1,37 @@
+[user]
+	email = tgondardmary@gmail.com
+	name = Thomas Gondard-Mary
+[core]
+	fileMode = false
+	editor = vim
+[push]
+	default = simple
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	cm = commit -m
+	ca = commit -a -m 
+	cp = cherry-pick
+	cb = checkout -b
+
+	rs = reset --soft
+	rsh = reset --soft HEAD~
+	rh = reset --hard
+	rst = restore --staged 
+	
+	lsdiff = diff-tree --no-commit-id --name-only -r
+	
+	lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+	lola = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%ae %Creset%s' --abbrev-commit --all
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+	lgam = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --merges
+
+	rebase-from-develop = '!git rebase -i HEAD~$(git rev-list develop..HEAD --count)'
+
+[safe]
+	directory = /app
+	directory = vendor
+[pull]
+	rebase = merges
