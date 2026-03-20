@@ -55,6 +55,14 @@ ls /var
 cd !$
 ```
 
+## Zsh
+
+```
+unset LESS
+bindkey \^U backward-kill-line
+```
+
+
 ## Git
 
 ### Aliases
