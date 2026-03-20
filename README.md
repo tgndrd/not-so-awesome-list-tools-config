@@ -116,3 +116,11 @@ Rebase according to develop, usefull if you are working with atomic commit and w
 git rebase -i HEAD~$(git rev-list develop..HEAD --count)
 ```
 
+### bashrc
+
+```
+alias phpqa='docker run --init -it --rm -v "$(pwd):/project" -v "$(pwd)/tmp-phpqa:/tmp" -w /project jakzal/phpqa:alpine'
+alias ll="ls -al"
+alias lll="sudo du -h --max-depth=1 | sort -h"
+alias reload-sources="source ~/.bashrc"
+```
