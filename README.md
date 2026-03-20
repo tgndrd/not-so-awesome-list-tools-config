@@ -62,7 +62,6 @@ cd !$
 
 ```
 [alias]
-        lga = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --all
         co = checkout
         st = status
         br = branch
@@ -70,8 +69,19 @@ cd !$
         ca = commit -a -m 
         cp = cherry-pick
         cb = checkout -b
+
         rs = reset --soft
+        rsh = reset --soft HEAD~
         rh = reset --hard
+        rst = restore --staged 
+
+        lsdiff = diff-tree --no-commit-id --name-only -r
+
+        lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+        lola = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%ae %Creset%s' --abbrev-commit --all
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+        lgam = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --merges
 ```
 
 ### Commands
